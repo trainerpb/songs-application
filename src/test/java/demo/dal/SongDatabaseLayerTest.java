@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class SongDatabaseLayerTest {
 
     @org.junit.jupiter.api.Test
-    void getSongs() throws SQLException {
+    void getSongs() throws SQLException, ClassNotFoundException {
         SongDatabaseLayer songDatabaseLayer = new SongDatabaseLayer();
         List<String[]> songs = songDatabaseLayer.getSongs();
         assertTrue(songs.size()==110);

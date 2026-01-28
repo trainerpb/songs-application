@@ -23,13 +23,13 @@ public class SongServlet extends HttpServlet {
             String html="<table border='1'>";
             for(String[] row:data){
                 // we concatenate BUT not recommended
-                html +=  "<td>"+row[0]+"</td><td>"+row[1]+"</td><td>"+row[2]+"</td>";
+                html +=  "<td>"+row[0]+"</td><td>"+row[1]+"</td><td>"+row[2]+"</td></tr>";
 
             }
             html+="</table>";
             resp.getWriter().println(html);
 
-        } catch (SQLException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

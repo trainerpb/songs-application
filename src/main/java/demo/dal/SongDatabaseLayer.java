@@ -6,10 +6,10 @@ import java.util.List;
 
 public class SongDatabaseLayer {
 
-    public List<String[]> getSongs() throws SQLException {
+    public List<String[]> getSongs() throws SQLException, ClassNotFoundException {
         List<String[]> songs = new ArrayList<>();
         // Step -1 : Load the Driver class (Optional in today's age - But still good to know)
-
+        Class.forName("org.postgresql.Driver");
         //Step-2:
         Connection con = DriverManager.getConnection("jdbc:postgresql://192.168.137.84:5432/ragdb", "soham", "admin");
 
