@@ -26,7 +26,7 @@ public class SongServlet extends HttpServlet {
                 html +=  "<td>"+row[0]+"</td><td>"+row[1]+"</td><td>"+row[2]+"</td></tr>";
 
             }
-            html+="</table>";
+            html+= "</table>";
             resp.getWriter().println(html);
 
         } catch (Exception e) {
